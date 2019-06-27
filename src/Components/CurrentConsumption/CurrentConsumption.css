@@ -1,3 +1,9 @@
+.current-consumption{
+  padding: 16px;
+ 
+}
+
+
 .flex-wrapper {
   display: flex;
   flex-flow: row nowrap;
@@ -5,7 +11,7 @@
 
 .single-chart {
   width: 33%;
-  justify-content: space-around ;
+  justify-content: space-around;
 }
 
 .circular-chart {
@@ -39,7 +45,7 @@
 }
 
 .circular-chart.green .circle {
-  stroke: #4CC790;
+  stroke: #4cc790;
 }
 
 .circular-chart.blue .circle {
@@ -51,4 +57,9 @@
   font-family: sans-serif;
   font-size: 0.5em;
   text-anchor: middle;
+}
+
+.pig {
+  font-size: 85px;
+  color: #178b31;
 }

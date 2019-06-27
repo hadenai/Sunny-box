@@ -51,7 +51,9 @@ const fetchQuizData = async (path, params = {}) => {
 export const getRealTimeData = async callback => {
   try {
     const raw = await fetchData(endpoints.REAL_TIME);
-    callback(raw.data);
+    const realtime = raw.data;
+    const size = realtime.length -1;
+    callback(raw.data[size]);
   } catch (error) {
     //When there is an error send an empty array.
     callback([]);
