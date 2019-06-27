@@ -1,6 +1,6 @@
 import React from 'react';
 
-function CurrentConsuption() {
+function CurrentConsumption() {
   return (
     <div className="App">
       <header className="App-header">
