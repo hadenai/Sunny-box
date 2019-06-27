@@ -4,7 +4,7 @@ import ConsumptionReport from './Components/ConsumptionReport/ConsumptionReport'
 import PrevisionalConsumption from './Components/PrevisionalConsumption/PrevisionalConsuption';
 import Quizz from './Components/Quizz/Quizz';
 import Tips from './Components/Tips/Tips';
-import CurrentConsumption from './CurrentConsumption/CurrentConsuption';
+import CurrentConsumption from './CurrentConsumption/CurrentConsumption';
 
 function App() {
   return (
