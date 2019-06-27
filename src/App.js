@@ -1,24 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import ConsumptionReport from './Components/ConsumptionReport/ConsumptionReport';
+import PrevisionalConsumption from './Components/PrevisionalConsumption/PrevisionalConsuption';
+import Quizz from './Components/Quizz/Quizz';
+import Tips from './Components/Tips/Tips';
+import CurrentConsumption from './CurrentConsumption/CurrentConsumption';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="col-6">
+        <CurrentConsumption />
+      </div>
+      <div className="col-6">
+        <ConsumptionReport />
+      </div>
+      <div className="col-6">
+        <Tips />
+      </div>
+      <div className="col-6">
+        <Quizz />
+      </div>
+      <PrevisionalConsumption />
     </div>
   );
 }
