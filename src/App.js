@@ -23,7 +23,6 @@ function App() {
     setLoading(false);
   }, []);
 
-
   const manageTips = params => {
     const computedTip = Computer.computeRandomTip(params);
     setTip(computedTip);
@@ -39,15 +38,10 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <div className="row">
-          <div className="col-12">
-            <CurrentConsumption percentage={getConsumed()} />
-          </div>
-        </div>
-        <div className="m-2">
+          <CurrentConsumption percentage={getConsumed()} />
+        <div className="my-2">
           <Recreation tip={tip} />
         </div>
-        
       </div>
     </div>
   );

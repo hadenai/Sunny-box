@@ -113,7 +113,7 @@ export const getTips = async callback => {
     callback(raw.data["hydra:member"]);
   } catch (error) {
     //When there is an error send an empty array.
-    callback([]);
+    callback([{content:"N/A"}]);
   }
 };
 
@@ -132,17 +132,3 @@ export const getSingleTip = async (tipId, callback) => {
   }
 };
 
-/**
- * Get energy data  from sun share api
- * @param {function} callback A Function to execute on the network response.
- */
-export const getSunShareData = async (tipsId, callback) => {
-  const path = `endpoints.TIPS/${tipsId}`;
-  try {
-    const raw = await fetchQuizData(path);
-    callback(raw.data["hydra:member"]);
-  } catch (error) {
-    //When there is an error send an empty array.
-    callback([]);
-  }
-};

@@ -27,13 +27,11 @@ const CurrentConsuption = ({ percentage }) => {
             />
           )}
         </ChangingProgressProvider>
-
         <p>Consomation de votre production</p>
       </div>
       <div className="col-6 align-self-center" >
         <i className="icon-pig pig" />
       </div>
-      <div />
     </div>
   );
 };
