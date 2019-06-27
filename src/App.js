@@ -1,35 +1,57 @@
-import React from 'react';
-import './App.css';
-import ConsumptionReport from './Components/ConsumptionReport/ConsumptionReport';
-import PrevisionalConsumption from './Components/PrevisionalConsumption/PrevisionalConsuption';
-import Quizz from './Components/Quizz/Quizz';
-import Tips from './Components/Tips/Tips';
-import CurrentConsumption from './Components/CurrentConsumption/CurrentConsuption';
+import React, { useState, useEffect } from "react";
+import "./App.css";
+import { getTips } from "./store";
+import Computer from "./Computer";
+import Recreation from "./Components/Recreation/Recreation";
+import PrevisionalConsumption from "./Components/PrevisionalConsumption/PrevisionalConsuption";
+import CurrentConsumption from "./Components/CurrentConsumption/CurrentConsuption";
+import { getRealTimeData } from "./store";
 
 function App() {
+  const [isLoading, setLoading] = useState(true);
+  const [consumed, setConsumed] = useState({});
+  const [tip, setTip] = useState("");
+
+  useEffect(() => {
+    getRealTimeData(data => {
+      setConsumed(data);
+    });
+    getTips(tips => {
+      manageTips(tips);
+    });
+
+    setLoading(false);
+  }, []);
+
+  console.log(consumed);
+  
+
+  const manageTips = params => {
+    const computedTip = Computer.computeRandomTip(params);
+    setTip(computedTip);
+    setLoading(false);
+  };
+
+  const getConsumed = () =>
+    Computer.computePercentageConsumed(consumed.autoconsoidx, consumed.prodidx);
+
+  if (isLoading) {
+    return <div />;
+  }
+
   return (
     <div className="App">
-      <div className='row'>
-        <div className="col-12">
-          <CurrentConsumption />
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <CurrentConsumption percentage={getConsumed()} />
+          </div>
         </div>
-      </div>
-      <div className="row">
-        <div className="col-6">
-          <ConsumptionReport />
-        </div>
-        <div className="col-6">
-          <Tips />
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-12">
-          <Quizz />
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-12">
-          <PrevisionalConsumption />
+        <Recreation tip={tip} />
+        <div className="row">
+          <div className="col-12">
+            <PrevisionalConsumption />
+          </div>
         </div>
       </div>
     </div>

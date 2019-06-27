@@ -2,7 +2,7 @@ import React from 'react';
 import '../../App.css';
 
 
-function Quizz() {
+function Quiz() {
   return (
     <div className="App color-quizz">
       <p>jdcdgvucdrgvv</p>
@@ -11,4 +11,4 @@ function Quizz() {
   );
 }
 
-export default Quizz;
+export default Quiz;
