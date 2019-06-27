@@ -1,11 +1,12 @@
 import React from 'react';
+import '../../App.css';
+
 
 function Quizz() {
   return (
-    <div className="App">
-      <header className="App-header">
-   
-      </header>
+    <div className="App color-quizz">
+      <p>jdcdgvucdrgvv</p>
+
     </div>
   );
 }

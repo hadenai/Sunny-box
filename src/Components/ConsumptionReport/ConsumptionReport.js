@@ -1,11 +1,12 @@
 import React from 'react';
+import '../../App.css';
+
 
 function ConsumptionReport() {
   return (
-    <div className="App">
-      <header className="App-header">
-   
-      </header>
+    <div className="App color-rc">
+      <p>jdcdgvucdrgvv</p>
+
     </div>
   );
 }
