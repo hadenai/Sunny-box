@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Quizz() {
+function Quiz() {
   return (
     <div className="App">
       <header className="App-header">
@@ -10,4 +10,4 @@ function Quizz() {
   );
 }
 
-export default Quizz;
+export default Quiz;

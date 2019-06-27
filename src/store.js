@@ -119,8 +119,8 @@ export const getTips = async callback => {
  * Get a single tip
  * @param {function} callback A Function to execute on the network response.
  */
-export const getSingleTip = async (tipsId, callback) => {
-  const path = `endpoints.TIPS/${tipsId}`;
+export const getSingleTip = async (tipId, callback) => {
+  const path = `endpoints.TIPS/${tipId}`;
   try {
     const raw = await fetchQuizData(path);
     callback(raw.data["hydra:member"]);
