@@ -5,6 +5,7 @@ import Recreation from "./Components/Recreation/Recreation";
 import CurrentConsumption from "./Components/CurrentConsumption/CurrentConsumption";
 import { getRealTimeData } from "./store";
 import Quiz from "./Components/Quiz/Quiz";
+import Graph from './Components/graph/Graph';
 
 const questions = [
   {
@@ -95,6 +96,9 @@ function App() {
           closeQuiz={() => {
             setVisibility(false);
           }} />
+      </div>
+      <div>
+        <Graph/>
       </div>
 
     </div>
