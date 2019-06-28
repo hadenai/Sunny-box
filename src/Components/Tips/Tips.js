@@ -1,11 +1,10 @@
 import React from 'react';
+import '../../App.css';
 
 function Tips() {
   return (
-    <div className="App">
-      <header className="App-header">
-   
-      </header>
+    <div className="App color-tips">
+      <p>jdcdgvucdrgvv</p>
     </div>
   );
 }
