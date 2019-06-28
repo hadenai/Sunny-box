@@ -11,6 +11,7 @@ const Recreation = ({ tip, startQuiz }) => {
 
       <div className="col-sm-6 quiz-trigger ui-card" onClick={startQuiz}>
         <h2>Quiz</h2>
+        <button onClick={startQuiz}>Start Quiz</button>
       </div>
     </div>
   );

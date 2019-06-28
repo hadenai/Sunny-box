@@ -10,6 +10,8 @@ const endpoints = {
   TIPS: "tips"
 };
 
+const dummyTip = "In this post, you will discover 78 great quotes from successful people.  This can help you capture a little bit of their wisdom and get some great insight​s along the way."
+
 /**
  * Perform a GET request using the [axios api]{@link https://github.com/axios/axios}
  * @param {string} path The URL path to be appended to the base server URL.
@@ -52,7 +54,7 @@ export const getRealTimeData = async callback => {
   try {
     const raw = await fetchData(endpoints.REAL_TIME);
     const realtime = raw.data;
-    const size = realtime.length -1;
+    const size = realtime.length - 1;
     callback(raw.data[size]);
   } catch (error) {
     //When there is an error send an empty array.
@@ -113,7 +115,7 @@ export const getTips = async callback => {
     callback(raw.data["hydra:member"]);
   } catch (error) {
     //When there is an error send an empty array.
-    callback([{content:"N/A"}]);
+    callback([{ content: dummyTip }]);
   }
 };
 

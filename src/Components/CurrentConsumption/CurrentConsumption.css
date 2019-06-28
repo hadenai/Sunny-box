@@ -1,8 +1,7 @@
-.current-consumption{
+.current-consumption {
   padding: 16px;
- 
-}
 
+}
 
 .flex-wrapper {
   display: flex;
@@ -60,6 +59,7 @@
 }
 
 .pig {
-  font-size: 85px;
-  color: #178b31;
+  font-size: 140px;
+  -webkit-text-fill-color: var(--color-primary);
+  color: var(--color-primary);
 }
