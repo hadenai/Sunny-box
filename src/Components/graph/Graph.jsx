@@ -79,7 +79,7 @@ const Graph = () => {
 
     animationEnabled: true,
     title: {
-      text: "production"
+      text: "Prévisions de production journalière"
     },
     axisX: {
       valueFormatString: "HH:mm"

@@ -79,10 +79,19 @@ function App() {
     return <div />;
   }
 
+  const getDiff = () => Math.round(consumed.injectidx - consumed.soutiridx);
+
   return (
     <div>
+      <div className="container nav-bar ui-card">
+        <div className="d-flex logo">
+          <i className="icon icon-sun"></i>
+          <p>Sunny Box</p>
+        </div>
+        <i onClick={() => alert('Wacko Cool 4 life !!! \n\nTeam: \nEric, Anaïs, Florin, Manoa, Cédric\n\nTechno: \nJavaScript, React, SCSS, Bootstrap, PHP, Symphony, API Platform\n\nProjet Hackathon (2 Jours)')} className="icon icon-info"></i>
+      </div>
       <div className="container">
-        <CurrentConsumption percentage={getConsumed()} />
+        <CurrentConsumption percentage={getConsumed()} chiffre={getDiff()} />
         <div className="my-2">
           <Recreation
             tip={tip}
@@ -97,7 +106,7 @@ function App() {
             setVisibility(false);
           }} />
       </div>
-      <div>
+      <div className="container ui-card pb-5">
         <Graph/>
       </div>
 

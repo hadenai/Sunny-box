@@ -6,12 +6,13 @@ const Recreation = ({ tip, startQuiz }) => {
     <div className="row">
       <div className=" col-sm-6 astuce ui-card">
         <h2>Astuce</h2>
-        <p>{tip.content}</p>
+        <p className="body-1 text-justify">{tip.content}</p>
       </div>
 
-      <div className="col-sm-6 quiz-trigger ui-card" onClick={startQuiz}>
+      <div className="col-sm-6 quiz-trigger ui-card pb-4" onClick={startQuiz}>
         <h2>Quiz</h2>
-        <button onClick={startQuiz}>Start Quiz</button>
+        <p className="body-1"> Teste tes connaissances sur l'énergie pour devenir le prochain Sun Master !</p>
+        <button className="button" onClick={startQuiz}>Start Quiz</button>
       </div>
     </div>
   );

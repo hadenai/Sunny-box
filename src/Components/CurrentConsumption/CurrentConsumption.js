@@ -6,13 +6,11 @@ import "../../App.css";
 import './CurrentConsumption.css';
 
 
-const CurrentConsuption = ({ percentage }) => {
-  const percentage1 = 40;
-  const percentage2 = 50;
+const CurrentConsuption = ({ percentage,chiffre }) => {
 
   return (
     <div className="row ui-card current-consumption">
-      <div className="col-6 justify-content-center align-items-center">
+      <div className="offset-lg-1 col-lg-3 col-sm-6 justify-content-center align-items-center">
         <ChangingProgressProvider values={[0, percentage]}>
           {value => (
             <CircularProgressbar
@@ -27,10 +25,11 @@ const CurrentConsuption = ({ percentage }) => {
             />
           )}
         </ChangingProgressProvider>
-        <p>Consomation de votre production</p>
+        <p className="body-1 text-center">Auto consommation</p>
       </div>
-      <div className="col-6 align-self-center" >
-        <i className="icon-pig-thunder pig" />
+      <div className="offset-lg-3 col-lg-5 col-sm-6 align-self-center" >
+        <p className="text-center"><i className="icon-pig-thunder pig" /></p>
+        <p className="body-1 text-center" style={{color: "#4caf50"}}>+{chiffre} K/Wh</p>
       </div>
     </div>
   );
