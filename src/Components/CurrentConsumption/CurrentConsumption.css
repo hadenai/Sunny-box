@@ -63,6 +63,6 @@
 
 .pig {
   font-size: 140px;
-  -webkit-text-fill-color: var(--color-primary);
-  color: var(--color-primary);
+  -webkit-text-fill-color: rgb(76, 175, 80);
+  color: rgb(76, 175, 80);
 }
